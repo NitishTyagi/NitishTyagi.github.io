@@ -314,17 +314,18 @@ p.__saying b {
 }
 
 .profile__bio .profile__img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   padding: 0.125em;
   overflow: hidden;
   height: 200px;
   width: 200px;
   margin: auto;
-  text-align: center;
 }
 
 .profile__bio .profile__img img {
-  margin-top: 10px;
-  width: 113px;
+  width: 100%;
 }
 
 .profile__bio .profile__text {
