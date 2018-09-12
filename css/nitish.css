@@ -76,7 +76,7 @@ a {
     top: 0;
     bottom: 0;
     content: '';
-    background: url("../Images/bg-image.jpg");
+    background: url("../images/bg-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center right;
