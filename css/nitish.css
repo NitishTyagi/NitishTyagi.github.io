@@ -96,9 +96,9 @@ a {
   position: relative;
   align-items: center; }
   .right__section .button__holder {
-    margin-top: 4rem; }
+    margin-top: 2rem; }
     .right__section .button__holder .button {
-      margin-right: 2rem; }
+      margin: 2rem 2rem 0 0; }
   .right__section .me {
     margin-bottom: 6.5rem; }
   .right__section .social__icons {
@@ -298,3 +298,13 @@ a {
   100% {
     transform: translateY(-50%);
     opacity: 1; } }
+
+@media screen and (max-width: 900px) {
+  .main__section .right__section {
+    width: 100%; }
+  .main__section .button__holder .button {
+    padding: 0 3.4rem; } }
+
+@media screen and (max-width: 500px) {
+  .right__section .right__section__content {
+    padding: 5rem 3rem; } }

@@ -42,10 +42,10 @@
     align-items: center;
 
     .button__holder {
-        margin-top: 4rem;
+        margin-top: 2rem;
 
         .button {
-            margin-right: 2rem;
+            margin: 2rem 2rem 0 0;
         }
     }
 
@@ -330,5 +330,28 @@
     100% {
         transform: translateY(-50%);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) { 
+    .main__section {
+        .right__section {
+            width: 100%;
+        }
+
+        .button__holder {
+
+            .button {
+                padding: 0 3.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .right__section {
+        .right__section__content {
+            padding: 5rem 3rem;
+        }
     }
 }
