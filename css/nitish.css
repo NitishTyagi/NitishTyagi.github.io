@@ -101,6 +101,9 @@ a {
       margin-left: 50%;
       transform-origin: left; }
 
+.hidden {
+  overflow: hidden; }
+
 .main__section {
   position: relative;
   display: flex;

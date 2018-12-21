@@ -3,6 +3,7 @@ const element = document.getElementById("hamburger");
 element.addEventListener('click', function(event){
     const element2 = document.getElementById("side__bar");
     element2.classList.toggle('active');
+    document.querySelector('body').classList.toggle('hidden');
 });
 
 document.getElementById("input__hamburger").addEventListener('click', function(event){

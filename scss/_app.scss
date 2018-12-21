@@ -2,6 +2,10 @@
 @import "_variable.scss";
 @import "_base.scss";
 
+.hidden {
+    overflow: hidden;
+}
+
 .main__section {
     position: relative;
     display: flex;
