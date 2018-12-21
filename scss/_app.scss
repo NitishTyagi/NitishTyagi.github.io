@@ -280,6 +280,16 @@
     }
 }
 
+// hamburger
+.hamburger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
 
 // keyframes
 @keyframes translateProductIcon {
@@ -340,11 +350,82 @@
         }
 
         .button__holder {
-
             .button {
                 padding: 0 3.4rem;
             }
         }
+    }
+
+    .side__bar {
+        position: fixed;
+        z-index: 1;
+
+        &.active {
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(0,0,0,0.2);
+            }
+
+            .side__bar__fixed {
+                transform: translateX(0%);
+            }
+        }
+
+        .side__bar__fixed {
+            transform: translateX(-100%);
+            transition: all 400ms cubic-bezier(0.25, 0.1, 0.28, 1.05);
+        }
+    }
+
+    .content__area {
+        margin: 3rem 4.9rem 0;
+        padding: 0;
+        border-left: 0;
+    }
+
+    .section__name {
+        padding-left: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .product {
+        padding-left: 0;
+        padding-bottom: 6rem;
+        margin-bottom: 6rem;
+        border-bottom: solid 1px lighten($base-light-grey-2, 2%);
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &::after {
+            left: 0;
+        }
+
+        h2 {
+            padding-left: 2.5rem;
+        }
+    }
+
+    .section__name {
+        h6 {
+            margin-bottom: 4.8rem;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: $base-black;
+        }
+    }
+
+    .hamburger {
+        display: inline-flex;
     }
 }
 
@@ -352,6 +433,25 @@
     .right__section {
         .right__section__content {
             padding: 5rem 3rem;
+        }
+    }
+
+    .content__area {
+        margin: 3rem 2.5rem 0;
+    }
+
+    .product {
+        &::after {
+            top: 6px;
+        }
+
+        h2 {
+            line-height: 2.3rem;
+            font-size: 1.5rem;
+        }
+
+        .product__image {
+            padding: 1.5rem 1.5rem 0 1.5rem;
         }
     }
 }

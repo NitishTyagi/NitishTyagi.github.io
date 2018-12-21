@@ -80,3 +80,56 @@ a {
     color: $base-black;
     font-size: 1.6rem;
 }
+
+.hamburger {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2.2rem;
+
+    .hamburger-input {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+
+        &:checked ~ .hamburger-line.second {
+            transform: rotate(-45deg); 
+        }
+
+        &:checked ~ .hamburger-line.first {
+            transform: translate(0.2rem, 0.7rem) rotate(-135deg);
+        }
+
+        &:checked ~ .hamburger-line.third {
+            transform: translate(0.9rem, -0.2rem) rotate(-135deg);
+        }
+    }
+
+    .hamburger-line {
+        width: 100%;
+        background: $base-color;
+        height: 0.4rem;
+        display: block;
+        border-radius: 0.5rem;
+        transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+        position: relative;
+
+        &.first,
+        &.third {
+            width: 50%;
+        }
+
+        &.third {
+            margin-left: 50%;
+            transform-origin: left;
+        }
+    }
+}
